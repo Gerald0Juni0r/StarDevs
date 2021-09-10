@@ -24,7 +24,7 @@ function fillCounters() {
 };
 
 function getData(param) {
-    return fetch('https://swapi.dev/api/${param}')
+    return fetch('https://swapi.dev/api/' + param)
             .then(res => res.json());
 };
 
@@ -36,7 +36,7 @@ function loadPhrase() {
             .then(data => data.json())
             .then(json => {
                 btn.innerHTML = 'Ver mais uma frase';
-                phrase.innerHTML = '"${json.content}"';
+                phrase.innerHTML = json.content;
 
                 phrase.animate([
                     {transform:'translateY(-70px)'},
