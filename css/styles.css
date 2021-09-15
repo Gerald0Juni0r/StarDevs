@@ -5,81 +5,60 @@
   --grey: #333;
   --white: #fafafa;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background: url('../img/bg.jpg');
   padding: 2%;
 }
-
-/* Texts ================ */
 h1, h2, span, p {
   font-family: 'Nunito', sans-serif;
   color: var(--white);
 }
-
-/* Header ================ */
-header h1 {
+h1 {
   color: var(--yellow-light);
   font-weight: 200;
   font-size: 4em;
 }
-
-/* Cards ================ */
-main .cards-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  margin-top: 5%;
+h2 {
+  color: var(--yellow-light);
 }
-
-main .cards-main .card-container {
-  width: 25%;
-  background-color: var(--white);
-  padding: 1rem;
-  border-radius: 0.3rem;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  transition: 0.3s ease-in-out;
-}
-
-main .cards-main .card-container:hover {
-  margin-top: -3%;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 5px 3px #999;
-}
-
-main .cards-main .card-container .card-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-main .cards-main .card-container .card-main span {
+span {
   color: var(--grey);
   font-size: 1.8em;
   font-weight: 600;
 }
 
-main .cards-main .card-container .card-main h2 {
-  color: var(--yellow-light);
-  font-size: 2em;
+/* Classes */
+.cards-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5%;
 }
-
+.card-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card-container {
+  background-color:rgba(249, 251, 253, 0.349);
+  padding: 2px;
+  border-radius: 10px;
+  display: flex;
+}
+/* .card-container:hover {
+  margin-top: -3%;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px 3px #999;
+} */
 
 /* Phrases ================ */
-main .phrases-container {
+.phrases-container {
   width: 100%;
   margin-top: 8%;
 
@@ -87,31 +66,26 @@ main .phrases-container {
   flex-direction: column;
   align-items: center; 
 }
-
-main .phrases-container button {
+button {
   width: 25%;
   border: none;
   outline: none;
-  padding: 1rem;
-  border-radius: 0.3rem;
+  border-radius: 10px;
   cursor: pointer;
-
-  font-size: 1.7em;
-  font-weight: 600;
+  font-size: 30px;
+  padding: 10px;
 
   background-color: var(--yellow);
   color: var(--white);
 
   transition: 0.3s ease-in-out;
 }
-
-main .phrases-container button:hover {
+button:hover {
   border-radius: 2rem;
   color: var(--yellow);
   background-color: var(--white);
 }
-
-main .phrases-container p {
+p {
   text-align: center;
   width: 75%;
   font-size: 2em;
@@ -120,7 +94,40 @@ main .phrases-container p {
 
   transition: 0.1s ease-in;
 }
-
-main .phrases-container p:hover {
+p:hover {
   opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+  .card-container{
+    width: 70px;
+    width: 270px;
+    margin: 5%;
+  }
+  .cards-main{
+    flex-direction: column;
+    text-align: center;
+  }
+  button {
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+  }
+  button:hover{
+    background-color: var(--yellow);
+    color: var(--white);
+  }
+  p{
+    font-size: 20px;
+    margin-top: 10%;
+  }
+  h2, span{
+    text-align:end;
+    padding: 5%;
+  }
+  body{
+    background-image: url('/img/bg2.jpg');
+    background-repeat: no-repeat;
+    background-color: black;
+  }
 }
