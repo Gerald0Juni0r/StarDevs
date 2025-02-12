@@ -169,11 +169,11 @@ $(document).ready(function() {
     // Math.random() returns a number between 0 and 1. Math.floor rounds a number down to the nearest whole number.
     var randomArray = quoteArray[Math.floor(Math.random() * quoteArray.length)];
     var randomQuote = randomArray[Math.floor(Math.random() * randomArray.length)];
-    document.getElementById("Quote").innerHTML = randomQuote;
+    document.getElementById("btn-phrases").innerHTML = randomQuote;
     
   }
 
-  document.getElementById("btn-phrases").onclick = generateQuote;
+  document.getElementById("phrases").onclick = generateQuote;
 
   generateQuote();
   
