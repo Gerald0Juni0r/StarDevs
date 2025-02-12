@@ -169,11 +169,13 @@ $(document).ready(function() {
     // Math.random() returns a number between 0 and 1. Math.floor rounds a number down to the nearest whole number.
     var randomArray = quoteArray[Math.floor(Math.random() * quoteArray.length)];
     var randomQuote = randomArray[Math.floor(Math.random() * randomArray.length)];
-    document.getElementById("phrases").innerHTML = randomQuote;
-    
+    document.getElementById("Quote").innerHTML = randomQuote;
+    // Using the Twitter API
+    var quoteLink = 'https://twitter.com/intent/tweet?text=' + randomQuote;
+    document.getElementById("tweetQuote").href = quoteLink;
   }
 
-  document.getElementById("btn-phrases").onclick = generateQuote;
+  document.getElementById("quoteButton").onclick = generateQuote;
 
   generateQuote();
   
