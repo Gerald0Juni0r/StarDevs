@@ -1,147 +1,49 @@
-/* /* Global ================ 
-:root {
-  --yellow: #DCA500;
-  --yellow-light: #FFBF00;
-  --grey: #333;
-  --white: #fafafa;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background: url('../img/bg.jpg');
-  padding: 2%;
-}
-h1, h2, span, p {
-  font-family: 'Nunito', sans-serif;
-  color: var(--white);
-}
-h1 {
-  color: var(--yellow-light);
-  font-weight: 200;
-  font-size: 4em;
-}
-h2 {
-  color: var(--yellow-light);
-}
-span {
-  color: var(--grey);
-  font-size: 1.8em;
-  font-weight: 600;
+:root{
+  --yellow: #ffe81f;
+  --bg: #000;
+  --text: #ffe81f;
 }
 
-/* Classes 
-.cards-main {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 5%;
-}
-.card-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.card-container {
-  background-color:rgba(249, 251, 253, 0.349);
-  padding: 2px;
-  border-radius: 10px;
-  display: flex;
-}
-/* .card-container:hover {
-  margin-top: -3%;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 5px 3px #999;
-} */
+*{box-sizing:border-box;margin:0;padding:0}
 
-/* Phrases ================ 
-.phrases-container {
-  width: 100%;
-  margin-top: 8%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-}
-button {
-  width: 25%;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 30px;
-  padding: 10px;
-
-  background-color: var(--yellow);
-  color: var(--white);
-
-  transition: 0.3s ease-in-out;
-}
-button:hover {
-  border-radius: 2rem;
-  color: var(--yellow);
-  background-color: var(--white);
-}
-p {
-  text-align: center;
-  width: 75%;
-  font-size: 2em;
-  font-weight: 700;
-  margin-top: 4%;
-
-  transition: 0.1s ease-in;
-}
-p:hover {
-  opacity: 0.7;
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Nunito', sans-serif;
+  text-align:center;
+  padding:60px;
 }
 
-@media (max-width: 900px) {
-  .card-container{
-    width: 70px;
-    width: 270px;
-    margin: 5%;
-  }
-  .cards-main{
-    flex-direction: column;
-    text-align: center;
-  }
-  button {
-    width: 200px;
-    height: 50px;
-    font-size: 15px;
-  }
-  button:hover{
-    background-color: var(--yellow);
-    color: var(--white);
-  }
-  p{
-    font-size: 20px;
-    margin-top: 10%;
-  }
-  h2, span{
-    text-align:end;
-    padding: 5%;
-  }
-  body{
-    background-image: url('/img/bg2.jpg');
-    background-repeat: no-repeat;
-    background-color: black;
-  }
-} 
-*/
-
-body
-{
-    background: black;
-    font: "News Cycle", sans-serif;
-    color: #ff6;
+.StarWarsLogo{
+  max-width:50vw;
+  height:auto;
+  display:inline-block;
+  margin-bottom:10px;
 }
 
-.StarWarsLogo
-{
-  max-width: 50vw;
-  height: auto;
+h2{
+  margin:20px 0 30px;
+  color:var(--text);
+}
+
+#Quote{
+  font-size:1.5rem;
+  white-space:pre-line; /* respeita \n nas strings */
+  margin:20px auto;
+  width:80%;
+  line-height:1.5;
+}
+
+.btn{
+  background:var(--yellow);
+  color:#000;
+  border:none;
+  padding:10px 20px;
+  font-size:1rem;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.btn:hover{
+  filter:brightness(0.95);
 }
